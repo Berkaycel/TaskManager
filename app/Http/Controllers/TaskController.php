@@ -20,8 +20,8 @@ class TaskController extends Controller
         try {
             return view('admin.developers.index');
         } catch (\Throwable $th) {
-            Log::error('There is an error occured when developers page loading process! Error Message: '.$th->getMessage());
-            return redirect()->back()->with('error', 'There is an error occured when developers page loading process!');
+            Log::error('An error occurred during the developers page loading process! Error Message: '.$th->getMessage());
+            return redirect()->back()->with('error', 'An error occurred during the developers page loading process!');
         }     
     }
 
@@ -31,10 +31,10 @@ class TaskController extends Controller
             $developers = $this->developerRepository->getAll();
             return Response::json($developers);
         } catch (\Throwable $th) {
-            Log::error('There is an error occured when developers data fetching process! Error Message: '.$th->getMessage());
+            Log::error('An error occurred during the developers data fetching process! Error Message: '.$th->getMessage());
             return Response::json([
                 "status" => false,
-                "message" => "There is an error occured when developers data fetching process!"
+                "message" => "An error occurred during the developers data fetching process!"
             ], 422);
         }
     }

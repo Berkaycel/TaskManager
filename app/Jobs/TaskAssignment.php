@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Library\Services\Interfaces\TaskAssignmentServiceInterface;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Log;
 
 class TaskAssignment implements ShouldQueue
 {
@@ -23,6 +24,10 @@ class TaskAssignment implements ShouldQueue
      */
     public function handle(): void
     {
-        $this->taskAssignmentService->assignJobsFromJson();
+        try {
+            $this->taskAssignmentService->assignJobsFromJson();
+        } catch (\Throwable $th) {
+            Log::error('An error occurred during the TaskAssignment process! Error message: '.$th->getMessage());
+        }
     }
 }
