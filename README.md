@@ -1,66 +1,26 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Task Manager
 
-## About Laravel
+This project is designed to allocate development tasks, obtained from third-party services, to developers within the system, focusing on weekly or sprint-specific assignments. The allocation process ensures a balanced distribution of work between the most productive developers and those with lighter workloads, optimizing task completion. The primary objective is to assign tasks in a way that minimizes the total completion time for all tasks received from the services.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technologies
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project leverages modern development technologies and architectural principles to ensure efficiency, scalability, and maintainability. The key technologies and design principles used in this project are as follows:
 
-## Learning Laravel
+**Technologies Used:**
+   - **Laravel Framework (PHP):** Utilized for building the backend, ensuring modular and structured development with built-in support for routing, database migrations, and task scheduling.
+   - **MySQL Database:** Employed to store and manage developer and task data efficiently while maintaining relational integrity.
+   - **Bootstrap (Frontend Template):** The project utilizes a pre-built Bootstrap template for the frontend, ensuring a responsive and user-friendly interface. This allows for quick and efficient UI development with ready-made components and a mobile-first design approach.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Development Principles and Practices:**
+   - **SOLID Principles:** The project follows SOLID principles to ensure maintainability, scalability, and readability. This approach creates a flexible and robust architecture capable of adapting to future changes.
+   - **Task Assignment Strategy:** Tasks are dynamically assigned to developers based on performance metrics and workload distribution to maintain balance across the team.
+   - **Efficient Task Scheduling:** The project leverages Laravel's task scheduler for recurring tasks, ensuring the timely fetching of tasks from third-party services and the efficient rebalancing of workloads.
+   - **Asynchronous Processing:** Although RabbitMQ is not yet integrated, the architecture is designed to support future asynchronous task processing, enhancing reliability and fault tolerance.
+   - **Scalability:** The system is built to handle an increasing number of tasks and developers without significant performance degradation. Its modular structure ensures that it can be easily extended as the system grows.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Additional Features:**
+   - **Automated Scheduling:** The project uses Laravel's task scheduler to manage recurring actions, such as fetching tasks from third-party services and rebalancing workloads.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+By combining these technologies and practices, the project offers a robust and efficient solution for task allocation and workload management.
